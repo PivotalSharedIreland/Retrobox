@@ -1,0 +1,12 @@
+PODS:
+  - Nimble (3.2.0)
+
+DEPENDENCIES:
+  - Nimble (~> 3.2.0)
+
+SPEC CHECKSUMS:
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+
+PODFILE CHECKSUM: f90ad77456c476284199c6fa7fe322716ecabd8f
+
+COCOAPODS: 1.0.0.beta.5

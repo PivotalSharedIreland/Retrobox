@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DA8512EBBB09A5A444D2980 /* Pods_RetroboxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2C1EADAE06D9C0F49A1659 /* Pods_RetroboxTests.framework */; };
+		A0A0147A3AA65430258ECBEC /* Pods_RetroboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7C02A32DF2986260653EDC /* Pods_RetroboxUITests.framework */; };
 		AEA629751CB3B8AB00BD05A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA629741CB3B8AB00BD05A6 /* AppDelegate.swift */; };
 		AEA629771CB3B8AB00BD05A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA629761CB3B8AB00BD05A6 /* ViewController.swift */; };
 		AEA6297A1CB3B8AB00BD05A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA629781CB3B8AB00BD05A6 /* Main.storyboard */; };
@@ -14,6 +16,8 @@
 		AEA6297F1CB3B8AB00BD05A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6297D1CB3B8AB00BD05A6 /* LaunchScreen.storyboard */; };
 		AEA6298A1CB3B8AB00BD05A6 /* RetroboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA629891CB3B8AB00BD05A6 /* RetroboxTests.swift */; };
 		AEA629951CB3B8AB00BD05A6 /* RetroboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA629941CB3B8AB00BD05A6 /* RetroboxUITests.swift */; };
+		AEA629A31CB3BBB900BD05A6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AEA629A21CB3BBB900BD05A6 /* Podfile */; };
+		B2367721DBAE2B5AF0A05A82 /* Pods_Retrobox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5727526AC54010368667E2E /* Pods_Retrobox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A91C9E8BB00538411BEB0EA /* Pods-Retrobox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Retrobox.release.xcconfig"; path = "Pods/Target Support Files/Pods-Retrobox/Pods-Retrobox.release.xcconfig"; sourceTree = "<group>"; };
+		4D2C1EADAE06D9C0F49A1659 /* Pods_RetroboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetroboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5713C9E9F13D52605A0C6238 /* Pods-RetroboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroboxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetroboxTests/Pods-RetroboxTests.release.xcconfig"; sourceTree = "<group>"; };
+		87557B31B14F6CF02B330F94 /* Pods-RetroboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetroboxUITests/Pods-RetroboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1E7917B279A16D792633F1D /* Pods-Retrobox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Retrobox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Retrobox/Pods-Retrobox.debug.xcconfig"; sourceTree = "<group>"; };
+		A5727526AC54010368667E2E /* Pods_Retrobox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Retrobox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA629711CB3B8AB00BD05A6 /* Retrobox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Retrobox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA629741CB3B8AB00BD05A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEA629761CB3B8AB00BD05A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,10 @@
 		AEA629901CB3B8AB00BD05A6 /* RetroboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA629941CB3B8AB00BD05A6 /* RetroboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroboxUITests.swift; sourceTree = "<group>"; };
 		AEA629961CB3B8AB00BD05A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEA629A21CB3BBB900BD05A6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CF7C02A32DF2986260653EDC /* Pods_RetroboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetroboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF47DE5301E6470939C8D8CE /* Pods-RetroboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetroboxUITests/Pods-RetroboxUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F3059347247559FEFA56D949 /* Pods-RetroboxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroboxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetroboxTests/Pods-RetroboxTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2367721DBAE2B5AF0A05A82 /* Pods_Retrobox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA8512EBBB09A5A444D2980 /* Pods_RetroboxTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,19 +84,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A0147A3AA65430258ECBEC /* Pods_RetroboxUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0118CE28007E8BD6E9D3E820 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5727526AC54010368667E2E /* Pods_Retrobox.framework */,
+				4D2C1EADAE06D9C0F49A1659 /* Pods_RetroboxTests.framework */,
+				CF7C02A32DF2986260653EDC /* Pods_RetroboxUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0EC551A4B3E0DE3308AA0331 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1E7917B279A16D792633F1D /* Pods-Retrobox.debug.xcconfig */,
+				4A91C9E8BB00538411BEB0EA /* Pods-Retrobox.release.xcconfig */,
+				F3059347247559FEFA56D949 /* Pods-RetroboxTests.debug.xcconfig */,
+				5713C9E9F13D52605A0C6238 /* Pods-RetroboxTests.release.xcconfig */,
+				87557B31B14F6CF02B330F94 /* Pods-RetroboxUITests.debug.xcconfig */,
+				DF47DE5301E6470939C8D8CE /* Pods-RetroboxUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AEA629681CB3B8AB00BD05A6 = {
 			isa = PBXGroup;
 			children = (
+				AEA629A21CB3BBB900BD05A6 /* Podfile */,
 				AEA629731CB3B8AB00BD05A6 /* Retrobox */,
 				AEA629881CB3B8AB00BD05A6 /* RetroboxTests */,
 				AEA629931CB3B8AB00BD05A6 /* RetroboxUITests */,
 				AEA629721CB3B8AB00BD05A6 /* Products */,
+				0EC551A4B3E0DE3308AA0331 /* Pods */,
+				0118CE28007E8BD6E9D3E820 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEA629991CB3B8AB00BD05A6 /* Build configuration list for PBXNativeTarget "Retrobox" */;
 			buildPhases = (
+				8545ABAF160ECF5647E5400A /* 📦 Check Pods Manifest.lock */,
 				AEA6296D1CB3B8AB00BD05A6 /* Sources */,
 				AEA6296E1CB3B8AB00BD05A6 /* Frameworks */,
 				AEA6296F1CB3B8AB00BD05A6 /* Resources */,
+				4B2A02CCA2F4FEB62CE9BFAC /* 📦 Embed Pods Frameworks */,
+				BB3E84B295A989A41827CE95 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEA6299C1CB3B8AB00BD05A6 /* Build configuration list for PBXNativeTarget "RetroboxTests" */;
 			buildPhases = (
+				58BFBDEF1134AB06D1A0F087 /* 📦 Check Pods Manifest.lock */,
 				AEA629811CB3B8AB00BD05A6 /* Sources */,
 				AEA629821CB3B8AB00BD05A6 /* Frameworks */,
 				AEA629831CB3B8AB00BD05A6 /* Resources */,
+				9FBDF098F5C2A0B92A9CDF72 /* 📦 Embed Pods Frameworks */,
+				6D275FDF0A9C416A500CB613 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEA6299F1CB3B8AB00BD05A6 /* Build configuration list for PBXNativeTarget "RetroboxUITests" */;
 			buildPhases = (
+				D3B536D6375E7C7ACCE34256 /* 📦 Check Pods Manifest.lock */,
 				AEA6298C1CB3B8AB00BD05A6 /* Sources */,
 				AEA6298D1CB3B8AB00BD05A6 /* Frameworks */,
 				AEA6298E1CB3B8AB00BD05A6 /* Resources */,
+				126402A37683A076A42E27C1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +282,7 @@
 			files = (
 				AEA6297F1CB3B8AB00BD05A6 /* LaunchScreen.storyboard in Resources */,
 				AEA6297C1CB3B8AB00BD05A6 /* Assets.xcassets in Resources */,
+				AEA629A31CB3BBB900BD05A6 /* Podfile in Resources */,
 				AEA6297A1CB3B8AB00BD05A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +302,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		126402A37683A076A42E27C1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetroboxUITests/Pods-RetroboxUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B2A02CCA2F4FEB62CE9BFAC /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Retrobox/Pods-Retrobox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58BFBDEF1134AB06D1A0F087 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6D275FDF0A9C416A500CB613 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetroboxTests/Pods-RetroboxTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8545ABAF160ECF5647E5400A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FBDF098F5C2A0B92A9CDF72 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetroboxTests/Pods-RetroboxTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB3E84B295A989A41827CE95 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Retrobox/Pods-Retrobox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3B536D6375E7C7ACCE34256 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AEA6296D1CB3B8AB00BD05A6 /* Sources */ = {
@@ -399,10 +574,11 @@
 		};
 		AEA6299A1CB3B8AB00BD05A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1E7917B279A16D792633F1D /* Pods-Retrobox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Retrobox/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = io.pivotal.Retrobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -410,10 +586,11 @@
 		};
 		AEA6299B1CB3B8AB00BD05A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A91C9E8BB00538411BEB0EA /* Pods-Retrobox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Retrobox/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = io.pivotal.Retrobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -421,6 +598,7 @@
 		};
 		AEA6299D1CB3B8AB00BD05A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3059347247559FEFA56D949 /* Pods-RetroboxTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RetroboxTests/Info.plist;
@@ -433,6 +611,7 @@
 		};
 		AEA6299E1CB3B8AB00BD05A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5713C9E9F13D52605A0C6238 /* Pods-RetroboxTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RetroboxTests/Info.plist;
@@ -445,6 +624,7 @@
 		};
 		AEA629A01CB3B8AB00BD05A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87557B31B14F6CF02B330F94 /* Pods-RetroboxUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RetroboxUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -456,6 +636,7 @@
 		};
 		AEA629A11CB3B8AB00BD05A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF47DE5301E6470939C8D8CE /* Pods-RetroboxUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RetroboxUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -484,6 +665,7 @@
 				AEA6299B1CB3B8AB00BD05A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEA6299C1CB3B8AB00BD05A6 /* Build configuration list for PBXNativeTarget "RetroboxTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +674,7 @@
 				AEA6299E1CB3B8AB00BD05A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEA6299F1CB3B8AB00BD05A6 /* Build configuration list for PBXNativeTarget "RetroboxUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +683,7 @@
 				AEA629A11CB3B8AB00BD05A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+framework module Pods_RetroboxUITests {
+  umbrella header "Pods-RetroboxUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
