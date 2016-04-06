@@ -28,13 +28,52 @@
                                 <rect key="frame" x="20" y="72" width="560" height="397"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hZb-GJ-PwG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="RetroItemCell" id="hZb-GJ-PwG" customClass="RetroItemCellView" customModule="Retrobox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZb-GJ-PwG" id="ec4-op-FV6">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duc-FR-gk9">
+                                                    <rect key="frame" x="535" y="14" width="8" height="14.5"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" none="YES"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="0JK-7g-Mub">
+                                                    <rect key="frame" x="545" y="7" width="15" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="W48-7s-sIV"/>
+                                                        <constraint firstAttribute="width" constant="15" id="pjL-tG-ZJN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Ping pong! 🏓" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4H-HO-aZg">
+                                                    <rect key="frame" x="8" y="20" width="519" height="3.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="e4H-HO-aZg" secondAttribute="bottom" constant="20" symbolic="YES" id="QOZ-4G-z4T"/>
+                                                <constraint firstItem="0JK-7g-Mub" firstAttribute="leading" secondItem="duc-FR-gk9" secondAttribute="trailing" constant="2" id="Ta2-Dp-CCh"/>
+                                                <constraint firstItem="e4H-HO-aZg" firstAttribute="top" secondItem="ec4-op-FV6" secondAttribute="top" constant="20" symbolic="YES" id="g1a-KL-bCC"/>
+                                                <constraint firstItem="0JK-7g-Mub" firstAttribute="centerY" secondItem="ec4-op-FV6" secondAttribute="centerY" id="i3D-T4-dJB"/>
+                                                <constraint firstItem="e4H-HO-aZg" firstAttribute="leading" secondItem="ec4-op-FV6" secondAttribute="leadingMargin" id="i5V-Td-mQH"/>
+                                                <constraint firstItem="duc-FR-gk9" firstAttribute="centerY" secondItem="ec4-op-FV6" secondAttribute="centerY" id="lSC-5h-NhK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0JK-7g-Mub" secondAttribute="trailing" constant="-8" id="myJ-A9-1GC"/>
+                                                <constraint firstItem="duc-FR-gk9" firstAttribute="leading" secondItem="e4H-HO-aZg" secondAttribute="trailing" constant="8" symbolic="YES" id="thz-KR-uw5"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="likes" destination="duc-FR-gk9" id="RcU-QV-dM1"/>
+                                            <outlet property="message" destination="e4H-HO-aZg" id="GqE-4Z-LME"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -149,4 +188,7 @@
             <point key="canvasLocation" x="1572" y="1681.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart.png" width="128" height="128"/>
+    </resources>
 </document>

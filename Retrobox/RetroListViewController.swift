@@ -24,7 +24,9 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 160.0
+        tableView.backgroundColor = UIColor.clearColor()
         getBoardItems()
         
         tableView.reloadData()
@@ -79,16 +81,19 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Value1, reuseIdentifier: "CELL")
+//        let cell = UITableViewCell(style: .Value1, reuseIdentifier: "RetroItemCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("RetroItemCell") as! RetroItemCellView
         
         switch currentList {
         case .Happy:
-            cell.textLabel?.text = happyList[indexPath.row]
+            cell.message.text = happyList[indexPath.row]
         case .Mediocre:
-            cell.textLabel?.text = mediocreList[indexPath.row]
+            cell.message.text = mediocreList[indexPath.row]
         case .Unhappy:
-            cell.textLabel?.text = unhappyList[indexPath.row]
+            cell.message.text = unhappyList[indexPath.row]
         }
+        
+//        cell.likes = happyList[indexPath.row]["likes"]
         
         return cell
     }
