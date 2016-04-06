@@ -13,9 +13,9 @@ import SwiftyJSON
 class RetroListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var titleLabel: UILabel!
-    var happyList: Array<String> = []
-    var mediocreList: Array<String> = []
-    var unhappyList: Array<String> = []
+    var happyList: Array<RetroItem> = []
+    var mediocreList: Array<RetroItem> = []
+    var unhappyList: Array<RetroItem> = []
     var currentList: RetroItemType = .Happy
     
     @IBOutlet weak var tableView: UITableView!
@@ -48,11 +48,11 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
                         let retroItem = RetroItem(json: retroItemJson)
                         switch retroItem.type {
                         case .Happy:
-                            self.happyList.append(retroItem.message)
+                            self.happyList.append(retroItem)
                         case .Mediocre:
-                            self.mediocreList.append(retroItem.message)
+                            self.mediocreList.append(retroItem)
                         case .Unhappy:
-                            self.unhappyList.append(retroItem.message)
+                            self.unhappyList.append(retroItem)
                         }
                     }
                     
@@ -86,14 +86,15 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         switch currentList {
         case .Happy:
-            cell.message.text = happyList[indexPath.row]
+            cell.message.text = happyList[indexPath.row].message
+            cell.likes.text = "\(happyList[indexPath.row].likes)"
         case .Mediocre:
-            cell.message.text = mediocreList[indexPath.row]
+            cell.message.text = mediocreList[indexPath.row].message
+            cell.likes.text = "\(mediocreList[indexPath.row].likes)"
         case .Unhappy:
-            cell.message.text = unhappyList[indexPath.row]
+            cell.message.text = unhappyList[indexPath.row].message
+            cell.likes.text = "\(unhappyList[indexPath.row].likes)"
         }
-        
-//        cell.likes = happyList[indexPath.row]["likes"]
         
         return cell
     }

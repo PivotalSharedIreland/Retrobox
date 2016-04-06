@@ -29,18 +29,12 @@ class RetroItem {
 //    var status: RetroItemStatus
 //    var creationDate: NSDate
 //    var lastModifiedDate: NSDate
-//    var likes: Int
+    var likes: Int
     
     init(json: JSON) {
         message = json["message"].stringValue
-        switch json["type"].stringValue {
-            case "HAPPY":
-                type = .Happy
-            case "MEDIOCRE":
-                type = .Mediocre
-        default: //case "SAD":
-                type = .Unhappy
-        }
+        type = typeFromString(json["type"].stringValue)
+        likes = json["likes"].int!
     }
     
     
@@ -54,4 +48,15 @@ class RetroItem {
 //    "last_modified_date": "2006-10-01T20:30:00Z",
 //    "likes": 0
 //    },
+}
+
+private func typeFromString(type: String) -> RetroItemType {
+    switch type {
+    case "HAPPY":
+        return .Happy
+    case "MEDIOCRE":
+        return .Mediocre
+    default: //case "SAD":
+        return .Unhappy
+    }
 }
