@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+//import "NSMutableArray+SWUtilityButtons.h"
 
 class RetroListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -88,6 +89,7 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
         case .Happy:
             cell.message.text = happyList[indexPath.row].message
             cell.likes.text = "\(happyList[indexPath.row].likes)"
+            cell.leftUtilityButtons = leftButtons() as [AnyObject]
         case .Mediocre:
             cell.message.text = mediocreList[indexPath.row].message
             cell.likes.text = "\(mediocreList[indexPath.row].likes)"
@@ -97,6 +99,13 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         return cell
+    }
+    
+    func leftButtons() -> NSArray {
+        let buttons = NSMutableArray()
+        buttons.sw_addUtilityButtonWithColor(UIColor.lightGrayColor(), title: "Archive")
+        buttons.sw_addUtilityButtonWithColor(UIColor.darkGrayColor(), title: "Action")
+        return buttons
     }
     
     @IBAction func happyButtonTapped(sender: UIButton) {

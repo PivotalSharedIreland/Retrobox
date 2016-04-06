@@ -2,11 +2,13 @@ PODS:
   - Alamofire (3.3.0)
   - Nimble (3.2.0)
   - SwiftyJSON (2.3.2)
+  - SWTableViewCell (0.3.7)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - Nimble (~> 3.2.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - SWTableViewCell (~> 0.3.7)
 
 EXTERNAL SOURCES:
   SwiftyJSON:
@@ -21,7 +23,8 @@ SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 
-PODFILE CHECKSUM: 580bb52eab90d708b926eaa4e43ab2b67e942b47
+PODFILE CHECKSUM: ed40409a0fb2d6c9457b6ea3ad9cfc65765b229a
 
 COCOAPODS: 1.0.0.beta.5

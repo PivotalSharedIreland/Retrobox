@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SWTableViewCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>06AB814C9151037E15E72AD5B8255185</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2B9FF4C264B2088E58F6098DCA5557AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>336D4E6C1D8FE9C0C9201EBF09CB8576</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3BE641D018B3695AB2CC3750690186E2</key>
+		<key>646DE1D3C389678D7D6C757AE949ABE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -58,6 +63,11 @@
 			<true/>
 		</dict>
 		<key>DB4BF9419E82CDFF4D754D38D4B8B645</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1AEC13E0F9251912DCD8ADEE94A358B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
