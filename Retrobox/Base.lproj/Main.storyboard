@@ -25,70 +25,101 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Jj-Av-lu6">
-                                <rect key="frame" x="20" y="72" width="560" height="417"/>
+                                <rect key="frame" x="20" y="72" width="560" height="397"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hZb-GJ-PwG">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZb-GJ-PwG" id="ec4-op-FV6">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-xu-hPJ">
-                                <rect key="frame" x="34" y="524" width="103" height="30"/>
-                                <state key="normal" title="Show Archived"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyS-xu-hPJ">
+                                <rect key="frame" x="20" y="515" width="88" height="27"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Show Archived">
+                                            <attributes>
+                                                <color key="NSColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ug-G0-4S1">
-                                <rect key="frame" x="34" y="497" width="41" height="30"/>
-                                <state key="normal" title="+ Add"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpS-tH-tx5">
-                                <rect key="frame" x="20" y="562" width="30" height="30"/>
-                                <state key="normal" title="🙂"/>
-                                <connections>
-                                    <action selector="happyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ve8-Bb-EVe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAm-JM-dLs">
-                                <rect key="frame" x="285" y="562" width="30" height="30"/>
-                                <state key="normal" title="😐"/>
-                                <connections>
-                                    <action selector="mehButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Up-5g-KCL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78o-VM-py2">
-                                <rect key="frame" x="550" y="562" width="30" height="30"/>
-                                <state key="normal" title="☹️"/>
-                                <connections>
-                                    <action selector="unhappyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8J5-bF-nOe"/>
-                                </connections>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqG-G4-kh0">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpS-tH-tx5">
+                                        <rect key="frame" x="20" y="10.5" width="30" height="30"/>
+                                        <state key="normal" title="🙂"/>
+                                        <connections>
+                                            <action selector="happyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ve8-Bb-EVe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAm-JM-dLs">
+                                        <rect key="frame" x="285" y="10.5" width="30" height="30"/>
+                                        <state key="normal" title="😐"/>
+                                        <connections>
+                                            <action selector="mehButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Up-5g-KCL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78o-VM-py2">
+                                        <rect key="frame" x="550" y="10.5" width="30" height="30"/>
+                                        <state key="normal" title="☹️"/>
+                                        <connections>
+                                            <action selector="unhappyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8J5-bF-nOe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xAm-JM-dLs" firstAttribute="centerY" secondItem="iqG-G4-kh0" secondAttribute="centerY" id="8OH-Yi-298"/>
+                                    <constraint firstItem="cpS-tH-tx5" firstAttribute="centerY" secondItem="iqG-G4-kh0" secondAttribute="centerY" id="Dmw-I6-51q"/>
+                                    <constraint firstItem="cpS-tH-tx5" firstAttribute="leading" secondItem="iqG-G4-kh0" secondAttribute="leading" constant="20" symbolic="YES" id="Gfk-Vs-Wlu"/>
+                                    <constraint firstAttribute="trailing" secondItem="78o-VM-py2" secondAttribute="trailing" constant="20" symbolic="YES" id="aZ1-qT-gBS"/>
+                                    <constraint firstAttribute="height" constant="50" id="glC-cc-hZd"/>
+                                    <constraint firstItem="xAm-JM-dLs" firstAttribute="centerX" secondItem="iqG-G4-kh0" secondAttribute="centerX" id="krL-NN-Euk"/>
+                                    <constraint firstItem="78o-VM-py2" firstAttribute="centerY" secondItem="iqG-G4-kh0" secondAttribute="centerY" id="xXQ-wt-5nY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ug-G0-4S1">
+                                <rect key="frame" x="20" y="477" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="39t-ZH-W58"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="+ ADD"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Jj-Av-lu6" secondAttribute="trailing" id="46y-a4-EAg"/>
-                            <constraint firstItem="9ug-G0-4S1" firstAttribute="top" secondItem="9Jj-Av-lu6" secondAttribute="bottom" constant="8" symbolic="YES" id="95s-KF-SJ6"/>
-                            <constraint firstItem="vyS-xu-hPJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="GXo-C4-HXj"/>
-                            <constraint firstItem="P0n-Uz-CdN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Ibo-TZ-Fn2"/>
-                            <constraint firstItem="9Jj-Av-lu6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="K2b-Ns-EPj"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xAm-JM-dLs" secondAttribute="bottom" constant="8" symbolic="YES" id="PUD-4X-vOM"/>
-                            <constraint firstItem="9ug-G0-4S1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="Q4D-i1-mpg"/>
-                            <constraint firstItem="P0n-Uz-CdN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Swt-84-Vlb"/>
-                            <constraint firstItem="cpS-tH-tx5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="TfL-RE-J8k"/>
-                            <constraint firstItem="cpS-tH-tx5" firstAttribute="top" secondItem="vyS-xu-hPJ" secondAttribute="bottom" constant="8" symbolic="YES" id="VPo-Jj-6QI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cpS-tH-tx5" secondAttribute="bottom" constant="8" symbolic="YES" id="XGE-AN-NdF"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vyS-xu-hPJ" secondAttribute="bottom" constant="8" symbolic="YES" id="bjB-Hc-fWz"/>
-                            <constraint firstItem="xAm-JM-dLs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h8x-7R-Ui2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cpS-tH-tx5" secondAttribute="bottom" constant="8" symbolic="YES" id="jsp-qJ-xWU"/>
-                            <constraint firstItem="vyS-xu-hPJ" firstAttribute="top" secondItem="9ug-G0-4S1" secondAttribute="bottom" constant="-3" id="nxq-AX-RUI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="78o-VM-py2" secondAttribute="bottom" constant="8" symbolic="YES" id="os5-Ws-x3P"/>
-                            <constraint firstItem="9Jj-Av-lu6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uK0-Oq-1AI"/>
-                            <constraint firstItem="cpS-tH-tx5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uTL-j9-eTA"/>
-                            <constraint firstAttribute="trailing" secondItem="78o-VM-py2" secondAttribute="trailing" constant="20" symbolic="YES" id="uhh-fW-wIp"/>
-                            <constraint firstItem="9Jj-Av-lu6" firstAttribute="top" secondItem="P0n-Uz-CdN" secondAttribute="bottom" constant="8" symbolic="YES" id="vkn-T6-atS"/>
+                            <constraint firstItem="9ug-G0-4S1" firstAttribute="top" secondItem="9Jj-Av-lu6" secondAttribute="bottom" constant="8" symbolic="YES" id="0hB-mp-I4U"/>
+                            <constraint firstItem="vyS-xu-hPJ" firstAttribute="top" secondItem="9ug-G0-4S1" secondAttribute="bottom" constant="8" symbolic="YES" id="41Y-Fq-DuA"/>
+                            <constraint firstAttribute="trailing" secondItem="iqG-G4-kh0" secondAttribute="trailing" id="5qd-lh-iya"/>
+                            <constraint firstItem="iqG-G4-kh0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6iy-U6-vDe"/>
+                            <constraint firstItem="9Jj-Av-lu6" firstAttribute="top" secondItem="P0n-Uz-CdN" secondAttribute="bottom" constant="8" symbolic="YES" id="Bdb-X8-srC"/>
+                            <constraint firstItem="9ug-G0-4S1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LM2-D4-2T8"/>
+                            <constraint firstItem="iqG-G4-kh0" firstAttribute="top" secondItem="vyS-xu-hPJ" secondAttribute="bottom" constant="8" symbolic="YES" id="UyJ-V4-nNF"/>
+                            <constraint firstItem="9Jj-Av-lu6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Zf7-mv-wus"/>
+                            <constraint firstItem="9Jj-Av-lu6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dti-L3-hsc"/>
+                            <constraint firstItem="P0n-Uz-CdN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="nfv-0y-DbO"/>
+                            <constraint firstItem="P0n-Uz-CdN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p0E-JA-VOz"/>
+                            <constraint firstItem="vyS-xu-hPJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qIp-Oi-99w"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iqG-G4-kh0" secondAttribute="bottom" id="y3t-8t-dzd"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="K2b-Ns-EPj"/>
-                                <exclude reference="uTL-j9-eTA"/>
-                                <exclude reference="bjB-Hc-fWz"/>
-                                <exclude reference="jsp-qJ-xWU"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="9Jj-Av-lu6" id="unR-k2-QC4"/>
