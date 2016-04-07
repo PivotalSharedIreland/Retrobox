@@ -11,13 +11,15 @@ import Alamofire
 import SwiftyJSON
 //import "NSMutableArray+SWUtilityButtons.h"
 
-class RetroListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RetroListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddFeedbackViewControllerDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     var happyList: Array<RetroItem> = []
     var mediocreList: Array<RetroItem> = []
     var unhappyList: Array<RetroItem> = []
     var currentList: RetroItemType = .Happy
+    var addFeedbackView: UIView?
+    var keyboardOffset: CGFloat = 0.0
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,11 +32,22 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.backgroundColor = UIColor.clearColor()
         getBoardItems()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RetroListViewController.keyboardWasShown(_:)), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RetroListViewController.keyboardWasHidden(_:)), name:UIKeyboardWillHideNotification, object: nil);
+        
         tableView.reloadData()
     }
     
+    func postWasSuccessful() {
+        getBoardItems()
+    }
+    
     func getBoardItems() {
-        Alamofire.request(.GET, "http://private-5f175-antra.apiary-mock.com/boards/1/items", parameters: [:])
+        
+        let url = "http://retrobox-api.cfapps.io/board/1" //api
+//        let url = "http://private-5f175-antra.apiary-mock.com/boards/1/items" //mock
+        
+        Alamofire.request(.GET, url, parameters: [:])
             .responseJSON { response in
                 
                 self.happyList = []
@@ -45,7 +58,9 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
                     
                     let json = JSON(result)
                     
-                    for retroItemJson in json["items"].array! {
+                    for retroItemJson in json["items"].array! {   //mock
+                    
+//                    for retroItemJson in json.array! {
                         let retroItem = RetroItem(json: retroItemJson)
                         switch retroItem.type {
                         case .Happy:
@@ -67,10 +82,15 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if (section == 1) {
+            return 1;
+        }
+        
         switch currentList {
         case .Happy:
             return happyList.count
@@ -81,21 +101,38 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 2 {
+            return 200
+        }
+        else {
+            return 100
+        }
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell(style: .Value1, reuseIdentifier: "RetroItemCell")
+        
+        if (indexPath.section == 1) {
+            return tableView.dequeueReusableCellWithIdentifier("AddFeedbackCell")!
+        }
+        
+        let i = indexPath.row
         let cell = tableView.dequeueReusableCellWithIdentifier("RetroItemCell") as! RetroItemCellView
+        
+        
         
         switch currentList {
         case .Happy:
-            cell.message.text = happyList[indexPath.row].message
-            cell.likes.text = "\(happyList[indexPath.row].likes)"
+            
+            cell.message.text = happyList[i].message
+            cell.likes.text = "\(happyList[i].likes)"
             cell.leftUtilityButtons = leftButtons() as [AnyObject]
         case .Mediocre:
-            cell.message.text = mediocreList[indexPath.row].message
-            cell.likes.text = "\(mediocreList[indexPath.row].likes)"
+            cell.message.text = mediocreList[i].message
+            cell.likes.text = "\(mediocreList[i].likes)"
         case .Unhappy:
-            cell.message.text = unhappyList[indexPath.row].message
-            cell.likes.text = "\(unhappyList[indexPath.row].likes)"
+            cell.message.text = unhappyList[i].message
+            cell.likes.text = "\(unhappyList[i].likes)"
         }
         
         return cell
@@ -125,6 +162,39 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
         currentList = .Unhappy
         tableView.reloadData()
     }
+    
+    @IBAction func addButtonTapped(sender: UIButton) {
+        let addFeedbackVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddFeedback") as! AddFeedbackViewController
+        addFeedbackView = sender.superview!
+        addFeedbackVC.view.frame = addFeedbackView!.bounds
+        addFeedbackVC.list = self.currentList
+        addFeedbackVC.delegate = self
+        addFeedbackView!.addSubview(addFeedbackVC.view)
+        addChildViewController(addFeedbackVC)
+    }
+    
+    func keyboardWasShown(notification: NSNotification) {
+        var info = notification.userInfo!
+        
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let addFeedbackAbsoluteOrigin = addFeedbackView!.convertPoint(addFeedbackView!.frame.origin, toView: view)
+        
+        keyboardOffset = (addFeedbackAbsoluteOrigin.y + addFeedbackView!.frame.size.height) - keyboardFrame.origin.y
 
+        if keyboardOffset > 0 {
+            UIView.animateWithDuration(0.1, animations: { () -> Void in
+                self.view.frame.origin.y = -self.keyboardOffset
+            })
+        }
+    }
+    
+    func keyboardWasHidden(notification: NSNotification) {
+        if keyboardOffset > 0 {
+            UIView.animateWithDuration(0.1, animations: { () -> Void in
+                self.view.frame.origin.y = 0.0            })
+        }
+        
+        keyboardOffset = 0.0
+    }
 }
 

@@ -9,10 +9,10 @@
 import Foundation
 import SwiftyJSON
 
-enum RetroItemType {
-    case Happy
-    case Mediocre
-    case Unhappy
+enum RetroItemType: String {
+    case Happy = "HAPPY"
+    case Mediocre = "MEDIOCRE"
+    case Unhappy = "SAD"
 }
 
 enum RetroItemStatus {

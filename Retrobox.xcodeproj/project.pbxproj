@@ -12,6 +12,7 @@
 		AE283D4E1CB508EE0015C562 /* UIButton+IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE283D4D1CB508EE0015C562 /* UIButton+IBDesignable.swift */; };
 		AE283D501CB50E3B0015C562 /* RetroItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE283D4F1CB50E3B0015C562 /* RetroItemCellView.swift */; };
 		AE283D521CB5121F0015C562 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = AE283D511CB5121F0015C562 /* heart.png */; };
+		AE283D541CB5524A0015C562 /* AddFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE283D531CB5524A0015C562 /* AddFeedbackViewController.swift */; };
 		AE8C0C721CB4173400FBEBF3 /* RetroItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C0C711CB4173400FBEBF3 /* RetroItem.swift */; };
 		AEA629751CB3B8AB00BD05A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA629741CB3B8AB00BD05A6 /* AppDelegate.swift */; };
 		AEA629771CB3B8AB00BD05A6 /* RetroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA629761CB3B8AB00BD05A6 /* RetroListViewController.swift */; };
@@ -51,6 +52,7 @@
 		AE283D4D1CB508EE0015C562 /* UIButton+IBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+IBDesignable.swift"; sourceTree = "<group>"; };
 		AE283D4F1CB50E3B0015C562 /* RetroItemCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetroItemCellView.swift; sourceTree = "<group>"; };
 		AE283D511CB5121F0015C562 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		AE283D531CB5524A0015C562 /* AddFeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeedbackViewController.swift; sourceTree = "<group>"; };
 		AE8C0C711CB4173400FBEBF3 /* RetroItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetroItem.swift; path = ../RetroItem.swift; sourceTree = "<group>"; };
 		AEA629711CB3B8AB00BD05A6 /* Retrobox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Retrobox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA629741CB3B8AB00BD05A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				AEA629801CB3B8AB00BD05A6 /* Info.plist */,
 				AE283D4F1CB50E3B0015C562 /* RetroItemCellView.swift */,
 				AE283D511CB5121F0015C562 /* heart.png */,
+				AE283D531CB5524A0015C562 /* AddFeedbackViewController.swift */,
 			);
 			path = Retrobox;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				AE8C0C721CB4173400FBEBF3 /* RetroItem.swift in Sources */,
 				AEA629751CB3B8AB00BD05A6 /* AppDelegate.swift in Sources */,
 				AE283D501CB50E3B0015C562 /* RetroItemCellView.swift in Sources */,
+				AE283D541CB5524A0015C562 /* AddFeedbackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
