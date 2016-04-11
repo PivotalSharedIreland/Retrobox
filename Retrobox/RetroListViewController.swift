@@ -72,9 +72,17 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
                         }
                     }
                     
+                    self.orderArrays()
                     self.tableView.reloadData()
                 }
         }
+    }
+    
+    private func orderArrays() {
+        happyList.sortInPlace({ $0.likes > $1.likes })
+        mediocreList.sortInPlace({ $0.likes > $1.likes })
+        unhappyList.sortInPlace({ $0.likes > $1.likes })
+        
     }
     
     override func viewWillAppear(animated: Bool) {
