@@ -12,7 +12,7 @@ import SwiftyJSON
 enum RetroItemType: String {
     case Happy = "HAPPY"
     case Mediocre = "MEDIOCRE"
-    case Unhappy = "SAD"
+    case Unhappy = "UNHAPPY"
 }
 
 enum RetroItemStatus {
