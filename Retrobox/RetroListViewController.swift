@@ -123,26 +123,12 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
         if (indexPath.section == 1) {
             return tableView.dequeueReusableCellWithIdentifier("AddFeedbackCell")!
         }
-        
         let i = indexPath.row
         let cell = tableView.dequeueReusableCellWithIdentifier("RetroItemCell") as! RetroItemCellView
-        
-        
-        
-        switch currentList {
-        case .Happy:
-            
-            cell.message.text = happyList[i].message
-            cell.likes.text = "\(happyList[i].likes)"
-            cell.leftUtilityButtons = leftButtons() as [AnyObject]
-        case .Mediocre:
-            cell.message.text = mediocreList[i].message
-            cell.likes.text = "\(mediocreList[i].likes)"
-        case .Unhappy:
-            cell.message.text = unhappyList[i].message
-            cell.likes.text = "\(unhappyList[i].likes)"
-        }
-        
+        let list = currentList == .Happy ? happyList : currentList == .Mediocre ? mediocreList : unhappyList
+        cell.message.text = list[i].message
+        cell.likes.text = "\(list[i].likes)"
+        cell.leftUtilityButtons = leftButtons() as [AnyObject]
         return cell
     }
     
@@ -199,7 +185,8 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
     func keyboardWasHidden(notification: NSNotification) {
         if keyboardOffset > 0 {
             UIView.animateWithDuration(0.1, animations: { () -> Void in
-                self.view.frame.origin.y = 0.0            })
+                self.view.frame.origin.y = 0.0
+            })
         }
         
         keyboardOffset = 0.0
