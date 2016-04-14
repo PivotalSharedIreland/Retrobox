@@ -224,6 +224,7 @@
 				AEA629831CB3B8AB00BD05A6 /* Resources */,
 				9FBDF098F5C2A0B92A9CDF72 /* 📦 Embed Pods Frameworks */,
 				6D275FDF0A9C416A500CB613 /* 📦 Copy Pods Resources */,
+				AE84E4B41CBFB5B000EE8344 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -417,6 +418,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetroboxTests/Pods-RetroboxTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AE84E4B41CBFB5B000EE8344 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Unfortuantely, Xcode 7.3 and Cocoapods are not yet fully compatible. The location of the xctest bundle has changed and so we need to manually copy some things ...\nOLD_BUNDLE=\"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}\"\nNEW_BUNDLE=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}\"\n\nFRAMEWORKS_PATH=\"Frameworks\"\n\n# For now, we only copy frameworks. This could be simply adapted to also copying Resources directories if needed\nOLD_FRAMEWORKS_PATH=\"${OLD_BUNDLE}/${FRAMEWORKS_PATH}\"\nif [[ -d \"${OLD_FRAMEWORKS_PATH}\" ]]; then\nNEW_FRAMEWORKS_PATH=\"${NEW_BUNDLE}/${FRAMEWORKS_PATH}\"\necho \"Copying frameworks from \\\"${OLD_FRAMEWORKS_PATH}\\\" to \\\"${NEW_FRAMEWORKS_PATH}\\\" ...\"\ncp -R \"${OLD_FRAMEWORKS_PATH}\" \"${NEW_FRAMEWORKS_PATH}\"\nfi";
 		};
 		BB3E84B295A989A41827CE95 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
