@@ -36,18 +36,6 @@ class RetroItem {
         type = typeFromString(json["type"].stringValue)
         likes = json["likes"].int!
     }
-    
-    
-//    {
-//    "id": 83838389,
-//    "board_id": 1,
-//    "type": "HAPPY",
-//    "message": "I'm a message",
-//    "status": "ACTIVE",
-//    "creation_date": "2006-10-01T20:30:00Z",
-//    "last_modified_date": "2006-10-01T20:30:00Z",
-//    "likes": 0
-//    },
 }
 
 private func typeFromString(type: String) -> RetroItemType {

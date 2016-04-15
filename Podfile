@@ -6,10 +6,11 @@ use_frameworks!
 target 'Retrobox' do
     pod 'Alamofire', '~> 3.0'
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-    pod 'SWTableViewCell', '~> 0.3.7'
 end
 
 target 'RetroboxTests' do
+    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+    pod 'Quick'
     pod 'Nimble', '~> 3.2.0'
 end
 

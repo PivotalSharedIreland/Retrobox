@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "646DE1D3C389678D7D6C757AE949ABE1"
+               BlueprintIdentifier = "3BE641D018B3695AB2CC3750690186E2"
                BuildableName = "Pods_Retrobox.framework"
                BlueprintName = "Pods-Retrobox"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "646DE1D3C389678D7D6C757AE949ABE1"
+            BlueprintIdentifier = "3BE641D018B3695AB2CC3750690186E2"
             BuildableName = "Pods_Retrobox.framework"
             BlueprintName = "Pods-Retrobox"
             ReferencedContainer = "container:Pods.xcodeproj">

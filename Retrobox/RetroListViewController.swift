@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-//import "NSMutableArray+SWUtilityButtons.h"
 
 class RetroListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddFeedbackViewControllerDelegate {
 
@@ -58,9 +57,8 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
                     
                     let json = JSON(result)
                     
-                    for retroItemJson in json["items"].array! {   //mock
-                    
-//                    for retroItemJson in json.array! {
+                    for retroItemJson in json["items"].array! {
+                        
                         let retroItem = RetroItem(json: retroItemJson)
                         switch retroItem.type {
                         case .Happy:
@@ -128,15 +126,7 @@ class RetroListViewController: UIViewController, UITableViewDelegate, UITableVie
         let list = currentList == .Happy ? happyList : currentList == .Mediocre ? mediocreList : unhappyList
         cell.message.text = list[i].message
         cell.likes.text = "\(list[i].likes)"
-        cell.leftUtilityButtons = leftButtons() as [AnyObject]
         return cell
-    }
-    
-    func leftButtons() -> NSArray {
-        let buttons = NSMutableArray()
-        buttons.sw_addUtilityButtonWithColor(UIColor.lightGrayColor(), title: "Archive")
-        buttons.sw_addUtilityButtonWithColor(UIColor.darkGrayColor(), title: "Action")
-        return buttons
     }
     
     @IBAction func happyButtonTapped(sender: UIButton) {

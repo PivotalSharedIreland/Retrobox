@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import SWTableViewCell
 
-class RetroItemCellView: SWTableViewCell {
+class RetroItemCellView: UITableViewCell {
     
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var likes: UILabel!
